@@ -1,0 +1,5 @@
+# Core pipeline has NO third-party runtime dependencies (stdlib only).
+pytest>=7          # tests
+# Optional:
+# anthropic>=0.40            # real LLM provider (src/c2k/extract/llm.py: AnthropicLLM)
+# sentence-transformers>=2.2 # real multilingual embeddings (src/c2k/cluster/embed.py)

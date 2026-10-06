@@ -1,0 +1,12 @@
+{
+  "n_cases": 16,
+  "n_violations": 0,
+  "score": 1.0,
+  "duplicate_case_ids": [],
+  "dangling_refs": [],
+  "self_links": [],
+  "escalation_flag_topic_violations": [],
+  "meta_solution_violations": [],
+  "missing_utterances": [],
+  "unresolved_with_solution": []
+}

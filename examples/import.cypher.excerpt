@@ -1,0 +1,65 @@
+// Auto-generated case->solution graph (idempotent MERGE script)
+
+CREATE CONSTRAINT case_case_id IF NOT EXISTS FOR (n:Case) REQUIRE n.case_id IS UNIQUE;
+CREATE CONSTRAINT topic_topic IF NOT EXISTS FOR (n:Topic) REQUIRE n.topic IS UNIQUE;
+CREATE CONSTRAINT solution_sol_id IF NOT EXISTS FOR (n:Solution) REQUIRE n.sol_id IS UNIQUE;
+CREATE CONSTRAINT volatilekind_kind IF NOT EXISTS FOR (n:VolatileKind) REQUIRE n.kind IS UNIQUE;
+
+// Nodes
+MERGE (n:Topic {topic: 'ac_temperature'});
+MERGE (n:Topic {topic: 'access_card'});
+MERGE (n:Topic {topic: 'coffee_machine'});
+MERGE (n:Topic {topic: 'guest_pass'});
+MERGE (n:Topic {topic: 'invoice_billing'});
+MERGE (n:Topic {topic: 'locker_request'});
+MERGE (n:Topic {topic: 'mail_package'});
+MERGE (n:Topic {topic: 'meeting_room_booking'});
+MERGE (n:Topic {topic: 'membership_change'});
+MERGE (n:Topic {topic: 'parking'});
+MERGE (n:Topic {topic: 'printer_issue'});
+MERGE (n:Topic {topic: 'wifi_access'});
+MERGE (n:Case {case_id: 'c-7f5a2c18'}) SET n += {topic: 'ac_temperature', case: 'A member complains that the open space is too cold and asks to adjust the air conditioning.', status: 'unresolved', escalation_flag: false, instances_count: 1, first_seen_ts: 1900967116, last_seen_ts: 1900967837};
+MERGE (n:Solution {sol_id: 's-9e94ede2f8'}) SET n += {text: 'Agent acknowledged the request; no concrete resolution within the thread slice.'};
+MERGE (n:Case {case_id: 'c-80531f6a'}) SET n += {topic: 'access_card', case: 'A member lost their access card and asks to block it and issue a replacement.', status: 'resolved', escalation_flag: true, instances_count: 2, first_seen_ts: 1900201470, last_seen_ts: 1901197365};
+MERGE (n:Solution {sol_id: 's-9e34578553'}) SET n += {text: 'Agent response: Old card is blocked. A replacement is ready at reception, bring your ID; the replacement fee of <amount> will be added to your next invoice.'};
+MERGE (n:VolatileKind {kind: 'amount'});
+MERGE (n:VolatileKind {kind: 'card'});
+MERGE (n:Case {case_id: 'c-bad5b18f'}) SET n += {topic: 'access_card', case: 'A member\'s access card does not open the door outside daytime hours.', status: 'escalated', escalation_flag: true, instances_count: 2, first_seen_ts: 1900703312, last_seen_ts: 1900833379};
+MERGE (n:Solution {sol_id: 's-c9acc56243'}) SET n += {text: 'Agent response: Your plan has day-access only (<time>-<time>). Evening access needs the 24/7 add-on; reply here if you\'d like it switched on and I\'ll forward the request to billing.'};
+MERGE (n:VolatileKind {kind: 'name'});
+MERGE (n:VolatileKind {kind: 'time'});
+MERGE (n:Case {case_id: 'c-ce222344'}) SET n += {topic: 'coffee_machine', case: 'A member reports that a shared coffee machine shows an error code and does not brew.', status: 'informational', escalation_flag: false, instances_count: 2, first_seen_ts: 1900565291, last_seen_ts: 1900672353};
+MERGE (n:Solution {sol_id: 's-2d05ca6c2d'}) SET n += {text: 'Agent response: That code means the drip tray is full. Pull the tray out, empty it, push it back until it clicks. If it repeats, use the machine on floor 1 and we\'ll call the technician.'};
+MERGE (n:Case {case_id: 'c-30697c75'}) SET n += {topic: 'guest_pass', case: 'A member asks how to arrange a day pass for a visiting guest.', status: 'informational', escalation_flag: false, instances_count: 2, first_seen_ts: 1900620129, last_seen_ts: 1900804162};
+MERGE (n:Solution {sol_id: 's-c15815d487'}) SET n += {text: 'Agent response: Register the guest in the app under Guests > Add (name + date). Reception will print a day pass; the first 4 guest days per month are free on your plan.'};
+MERGE (n:VolatileKind {kind: 'date'});
+MERGE (n:Case {case_id: 'c-770ecd48'}) SET n += {topic: 'invoice_billing', case: 'A member believes last month\'s invoice is higher than their plan and asks for a check.', status: 'escalated', escalation_flag: true, instances_count: 3, first_seen_ts: 1900224528, last_seen_ts: 1900811369};
+MERGE (n:Solution {sol_id: 's-2d01c61171'}) SET n += {text: 'Agent response: Found it: two meeting-room overages were billed at the non-member rate. I\'ve asked billing to reissue the invoice; you\'ll get the corrected one by email within 2 working days.'};
+MERGE (n:VolatileKind {kind: 'email'});
+MERGE (n:Case {case_id: 'c-1ce57fb6'}) SET n += {topic: 'invoice_billing', case: 'A member asks on which day the monthly membership fee is charged.', status: 'informational', escalation_flag: true, instances_count: 1, first_seen_ts: 1900525271, last_seen_ts: 1900525926};
+MERGE (n:Solution {sol_id: 's-e840935d3c'}) SET n += {text: 'Agent response: ตัดค่าบริการทุกวันที่ 1 ของเดือนค่ะ ถ้าไม่ผ่านจะลองอีกครั้งวันที่ 3 และส่งอีเมลเตือนค่ะ'};
+MERGE (n:Case {case_id: 'c-0d743d71'}) SET n += {topic: 'locker_request', case: 'A member asks to be assigned a locker to store equipment near their desk.', status: 'resolved', escalation_flag: true, instances_count: 2, first_seen_ts: 1900687178, last_seen_ts: 1901059413};
+MERGE (n:Solution {sol_id: 's-c5845672d7'}) SET n += {text: 'Variant 1: Agent response: Assigned you locker L-22 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs <amount> per month and starts on your next invoice. Variant 2: Agent response: Assigned you locker L-37 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs <amount> per month and starts on your next invoice.'};
+MERGE (n:Case {case_id: 'c-c4d15d48'}) SET n += {topic: 'mail_package', case: 'A member asks whether a package addressed to them has been delivered to the space.', status: 'resolved', escalation_flag: true, instances_count: 2, first_seen_ts: 1900811363, last_seen_ts: 1901012695};
+MERGE (n:Solution {sol_id: 's-959e92b746'}) SET n += {text: 'Agent response: Yes, it\'s in the mailroom shelf under your name. Pick it up at reception with your card; we hold packages for 5 days.'};
+MERGE (n:Case {case_id: 'c-44e22b2e'}) SET n += {topic: 'meeting_room_booking', case: 'A member finds their booked meeting room occupied by another member claiming the same slot.', status: 'resolved', escalation_flag: false, instances_count: 3, first_seen_ts: 1900487811, last_seen_ts: 1900897259};
+MERGE (n:Solution {sol_id: 's-b85ce9176e'}) SET n += {text: 'Agent response: There was a double booking from the old calendar sync. I moved your slot to room D at the same time and cancelled the duplicate. Please re-check the app.'};
+MERGE (n:Case {case_id: 'c-5f422231'}) SET n += {topic: 'meeting_room_booking', case: 'A member asks how to book a meeting room in the member app.', status: 'informational', escalation_flag: false, instances_count: 2, first_seen_ts: 1900766038, last_seen_ts: 1901036177};
+MERGE (n:Solution {sol_id: 's-0af1969439'}) SET n += {text: 'Agent response: In the member app go to Spaces > Rooms, pick the date, then tap the room\'s time grid. Bookings up to 2 hours per day are included in your plan.'};
+MERGE (n:Case {case_id: 'c-8a727bc6'}) SET n += {topic: 'membership_change', case: 'A member wants to change their plan from hot desk to a dedicated desk from a given date.', status: 'resolved', escalation_flag: true, instances_count: 1, first_seen_ts: 1900320739, last_seen_ts: 1900323319};
+MERGE (n:Solution {sol_id: 's-49d70d15c3'}) SET n += {text: 'Agent response: Desk 7 by the window is free from that date. I\'ve sent the plan-change form to your email; sign it and the new rate applies from the next billing cycle.'};
+MERGE (n:Case {case_id: 'c-892a4eb5'}) SET n += {topic: 'parking', case: 'A member asks whether member parking is available and how to use it.', status: 'resolved', escalation_flag: false, instances_count: 3, first_seen_ts: 1900305214, last_seen_ts: 1901299656};
+MERGE (n:Solution {sol_id: 's-4f51d6c4f0'}) SET n += {text: 'Agent response: Yes: level -1 of the building, 6 member spots, first come first served. Validate your ticket at reception to get the member rate.'};
+MERGE (n:Case {case_id: 'c-bd81b7b9'}) SET n += {topic: 'printer_issue', case: 'A member reports that a shared printer shows a paper-jam error with no visible jam and their job is stuck in the queue.', status: 'resolved', escalation_flag: false, instances_count: 1, first_seen_ts: 1901147646, last_seen_ts: 1901150617};
+MERGE (n:Solution {sol_id: 's-5d68895ae6'}) SET n += {text: 'Agent response: Cleared it: the rear tray sensor was stuck. Your job printed. Next time, open the rear door once and close it; that resets the sensor.'};
+MERGE (n:Case {case_id: 'c-c054a368'}) SET n += {topic: 'wifi_access', case: 'A member reports that the office wifi is unstable or not connecting at their desk or floor and asks for a fix.', status: 'informational', escalation_flag: false, instances_count: 4, first_seen_ts: 1900358089, last_seen_ts: 1902592900};
+MERGE (n:Solution {sol_id: 's-ed5b797965'}) SET n += {text: 'Variant 1: Agent response: Looking into it, the access point is being restarted. Variant 2: Agent response: Please forget the network and reconnect to the 5GHz one named \'Hub-5G\', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk.'};
+MERGE (n:Case {case_id: 'c-c07a85bf'}) SET n += {topic: 'wifi_access', case: 'A member asks for the guest wifi credentials for a visiting client.', status: 'informational', escalation_flag: false, instances_count: 2, first_seen_ts: 1900448205, last_seen_ts: 1900475094};
+MERGE (n:Solution {sol_id: 's-aa070c41b8'}) SET n += {text: 'Agent response: The guest network is \'Hub-Guest\'; the password rotates weekly and is printed on the reception screen. Your guest can also scan the QR code at the front desk.'};
+
+// Edges
+MATCH (a:Case {case_id: 'c-7f5a2c18'}), (b:Topic {topic: 'ac_temperature'}) MERGE (a)-[:INSTANCE_OF]->(b);
+MATCH (a:Case {case_id: 'c-7f5a2c18'}), (b:Solution {sol_id: 's-9e94ede2f8'}) MERGE (a)-[:RESOLVED_BY]->(b);
+MATCH (a:Case {case_id: 'c-80531f6a'}), (b:Topic {topic: 'access_card'}) MERGE (a)-[:INSTANCE_OF]->(b);
+MATCH (a:Case {case_id: 'c-80531f6a'}), (b:Solution {sol_id: 's-9e34578553'}) MERGE (a)-[:RESOLVED_BY]->(b);
+MATCH (a:Case {case_id: 'c-80531f6a'}), (b:VolatileKind {kind: 'amount'}) MERGE (a)-[:MENTIONS_VOLATILE]->(b);

@@ -1,0 +1,121 @@
+
+==============================================================================
+1. INGEST + THREAD RECONSTRUCTION
+==============================================================================
+messages: 135  chats: 11  langs: ['en', 'th']
+sessions (12h gap + dyad rule): 40, dropped: ['multi_overlap']
+threads: 41 (substantive: 39)
+
+==============================================================================
+2. PRE-QUALIFY + EXTRACT (MockLLM) + POST-FILTER
+==============================================================================
+raw cases: 33  after post-filter: 33
+drops by stage : {'normalize': 2, 'worker_needs_help': 6}
+drops by reason: {'MID_THREAD_REPLY': 2, 'NO_SUBSTANTIVE_REQUESTER_MSG': 2, 'REMINDER_AS_ANCHOR': 2, 'REQUESTER_COMPLIANCE_ONLY': 2}
+
+==============================================================================
+3. CLUSTER + MERGE -> CANONICAL CASES
+==============================================================================
+canonical cases: 16  topics: 12
+- c-7f5a2c18 [ac_temperature] x1 status=unresolved esc=False langs=['en']
+    case:     A member complains that the open space is too cold and asks to adjust the air conditioning.
+    solution: Agent acknowledged the request; no concrete resolution within the thread slice.
+- c-80531f6a [access_card] x2 status=resolved esc=True langs=['en']
+    case:     A member lost their access card and asks to block it and issue a replacement.
+    solution: Agent response: Old card is blocked. A replacement is ready at reception, bring your ID; the replacement fee o
+- c-bad5b18f [access_card] x2 status=escalated esc=True langs=['en']
+    case:     A member's access card does not open the door outside daytime hours.
+    solution: Agent response: Your plan has day-access only (<time>-<time>). Evening access needs the 24/7 add-on; reply her
+- c-ce222344 [coffee_machine] x2 status=informational esc=False langs=['en', 'th']
+    case:     A member reports that a shared coffee machine shows an error code and does not brew.
+    solution: Agent response: That code means the drip tray is full. Pull the tray out, empty it, push it back until it clic
+- c-30697c75 [guest_pass] x2 status=informational esc=False langs=['en', 'th']
+    case:     A member asks how to arrange a day pass for a visiting guest.
+    solution: Agent response: Register the guest in the app under Guests > Add (name + date). Reception will print a day pas
+- c-770ecd48 [invoice_billing] x3 status=escalated esc=True langs=['en', 'th']
+    case:     A member believes last month's invoice is higher than their plan and asks for a check.
+    solution: Agent response: Found it: two meeting-room overages were billed at the non-member rate. I've asked billing to 
+- c-1ce57fb6 [invoice_billing] x1 status=informational esc=True langs=['th']
+    case:     A member asks on which day the monthly membership fee is charged.
+    solution: Agent response: ตัดค่าบริการทุกวันที่ 1 ของเดือนค่ะ ถ้าไม่ผ่านจะลองอีกครั้งวันที่ 3 และส่งอีเมลเตือนค่ะ
+- c-0d743d71 [locker_request] x2 status=resolved esc=True langs=['en']
+    case:     A member asks to be assigned a locker to store equipment near their desk.
+    solution: Variant 1: Agent response: Assigned you locker L-22 next to your desk. Set your own 4-digit code on the keypad
+  ...
+
+==============================================================================
+4. VALIDATE (KB checks) + GRAPH
+==============================================================================
+kb score: 1.0  violations: 0
+graph: {'n_nodes': 50, 'n_edges': 65, 'nodes_by_label': {'Topic': 12, 'Case': 16, 'Solution': 16, 'VolatileKind': 6}, 'edges_by_type': {'INSTANCE_OF': 16, 'RESOLVED_BY': 16, 'MENTIONS_VOLATILE': 22, 'RELATED_TO': 10, 'LEADS_TO': 1}}
+LEADS_TO chains: [('c-5f422231', ['c-44e22b2e'])]
+
+==============================================================================
+5. ANSWER SAMPLE QUESTIONS (retrieval + MockLLM, similarity threshold 0.45)
+==============================================================================
+Q (en): wifi keeps dropping at my desk on the 3rd floor, what can I do?
+A: Based on a similar past case: Variant 1: Looking into it, the access point is being restarted. Variant 2: Please forget the network and reconnect to the 5GHz one named 'Hub-5G', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk.
+escalate_to_human: False
+evidence trail:
+  - c-c054a368 [wifi_access] cosine=0.728 via=question status=informational escalation_flag=False
+      matched: Hi, the wifi on the 3rd floor keeps dropping, I can't join my call. Any fix? (<person_name
+      threads: ['chat-group-01:1132', 'chat-m-01:1001', 'chat-m-03:1104', 'chat-m-07:1050']  evidence_msg_ids: [1001, 1002, 1003, 1050, 1051, 1052, 1105, 1106, 1107, 1132, 1134]
+  - c-c07a85bf [wifi_access] cosine=0.353 via=question status=informational escalation_flag=False
+      matched: What's the guest wifi password? I have a client coming at <time>.
+      threads: ['chat-m-04:1073', 'chat-m-08:1025']  evidence_msg_ids: [1025, 1026, 1074, 1075]
+  - c-bad5b18f [access_card] cosine=0.321 via=question status=escalated escalation_flag=True
+      matched: My card doesn't open the door after <time>, the reader just blinks red. (<person_name>, de
+      threads: ['chat-m-01:1033', 'chat-m-07:1083']  evidence_msg_ids: [1033, 1034, 1084, 1085]
+  context (related/leads_to): ['c-30697c75']
+  based_on: ['c-c054a368']
+------------------------------------------------------------------------------
+Q (en): I lost my access card, what should I do?
+A: I don't have a confirmed past resolution for this; passing it to a human agent.
+escalate_to_human: True
+evidence trail:
+  - c-80531f6a [access_card] cosine=0.417 via=question status=resolved escalation_flag=True
+      matched: I lost my access card somewhere yesterday, card number <card_number>. Can you block it and
+      threads: ['chat-m-04:1012', 'chat-m-06:1116']  evidence_msg_ids: [1012, 1013, 1014, 1117, 1118, 1119]
+  - c-bad5b18f [access_card] cosine=0.330 via=case status=escalated escalation_flag=True
+      matched: access_card | A member's access card does not open the door outside daytime hours.
+      threads: ['chat-m-01:1033', 'chat-m-07:1083']  evidence_msg_ids: [1033, 1034, 1084, 1085]
+  - c-770ecd48 [invoice_billing] cosine=0.258 via=question status=escalated escalation_flag=True
+      matched: My invoice for last month shows <amount> but my plan is cheaper. Can someone check? My ema
+      threads: ['chat-m-02:1005', 'chat-m-04:1109', 'chat-m-08:1053']  evidence_msg_ids: [1006, 1007, 1008, 1053, 1054, 1055, 1110, 1111, 1112]
+  context (related/leads_to): ['c-1ce57fb6']
+  based_on: []
+------------------------------------------------------------------------------
+Q (th): ค่าสมาชิกรายเดือนตัดวันไหนคะ
+A: จากกรณีที่คล้ายกันก่อนหน้านี้: ตัดค่าบริการทุกวันที่ 1 ของเดือนค่ะ ถ้าไม่ผ่านจะลองอีกครั้งวันที่ 3 และส่งอีเมลเตือนค่ะ เรื่องนี้ต้องให้เจ้าหน้าที่ยืนยันหรือดำเนินการ จึงแจ้งเจ้าหน้าที่ให้ด้วยค่ะ
+escalate_to_human: True
+evidence trail:
+  - c-1ce57fb6 [invoice_billing] cosine=0.658 via=question status=informational escalation_flag=True
+      matched: ค่าสมาชิกรายเดือนตัดวันไหนคะ อยากให้มั่นใจว่ามีเงินในบัตร (<person_name>, โต๊ะ 44)
+      threads: ['chat-m-09:1028']  evidence_msg_ids: [1028, 1029]
+  - c-892a4eb5 [parking] cosine=0.135 via=question status=resolved escalation_flag=False
+      matched: มีที่จอดรถสำหรับสมาชิกไหมคะ จะขับรถมาวันที่ <date> (<person_name>, โต๊ะ 13)
+      threads: ['chat-m-03:1070', 'chat-m-07:1022', 'chat-m-09:1128']  evidence_msg_ids: [1022, 1023, 1071, 1072, 1128, 1129]
+  - c-770ecd48 [invoice_billing] cosine=0.107 via=question status=escalated escalation_flag=True
+      matched: ใบแจ้งหนี้เดือนที่แล้วขึ้น <amount> แต่แพ็กเกจของฉันถูกกว่านี้ค่ะ ช่วยเช็กให้หน่อย อีเมล <
+      threads: ['chat-m-02:1005', 'chat-m-04:1109', 'chat-m-08:1053']  evidence_msg_ids: [1006, 1007, 1008, 1053, 1054, 1055, 1110, 1111, 1112]
+  context (related/leads_to): ['c-5f422231']
+  based_on: ['c-1ce57fb6']
+------------------------------------------------------------------------------
+Q (en): Can I bring my dog to the office?
+A: I don't have a confirmed past resolution for this; passing it to a human agent.
+escalate_to_human: True
+evidence trail:
+  - c-c054a368 [wifi_access] cosine=0.371 via=question status=informational escalation_flag=False
+      matched: Hi, the wifi on the 3rd floor keeps dropping, I can't join my call. Any fix? (<person_name
+      threads: ['chat-group-01:1132', 'chat-m-01:1001', 'chat-m-03:1104', 'chat-m-07:1050']  evidence_msg_ids: [1001, 1002, 1003, 1050, 1051, 1052, 1105, 1106, 1107, 1132, 1134]
+  - c-7f5a2c18 [ac_temperature] cosine=0.351 via=question status=unresolved escalation_flag=False
+      matched: It's freezing in the open space, can the AC go up a bit?
+      threads: ['chat-m-06:1079']  evidence_msg_ids: [1080, 1081]
+  - c-5f422231 [meeting_room_booking] cosine=0.344 via=question status=informational escalation_flag=False
+      matched: How do I book a meeting room for tomorrow? Can't find the button in the app.
+      threads: ['chat-m-03:1039', 'chat-m-09:1091']  evidence_msg_ids: [1039, 1040, 1091, 1092]
+  context (related/leads_to): ['c-c07a85bf', 'c-44e22b2e', 'c-892a4eb5']
+  based_on: []
+------------------------------------------------------------------------------
+
+artifacts written to out/demo/ (threads, cases_raw, cases_canonical, trash, graph.json, import.cypher, kb_report)

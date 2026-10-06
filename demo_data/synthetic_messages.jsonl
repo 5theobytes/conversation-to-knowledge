@@ -1,0 +1,135 @@
+{"chat_id": "chat-group-01", "msg_id": 1132, "ts": 1902592000, "from_id": "m-01", "from_role": "requester", "text": "Is anyone else getting kicked off the wifi on floor 3?", "reply_to": null}
+{"chat_id": "chat-group-01", "msg_id": 1133, "ts": 1902592060, "from_id": "m-02", "from_role": "requester", "text": "Yes, same here since the morning", "reply_to": null}
+{"chat_id": "chat-group-01", "msg_id": 1134, "ts": 1902592300, "from_id": "a-01", "from_role": "agent", "text": "Looking into it, the access point is being restarted.", "reply_to": null}
+{"chat_id": "chat-group-01", "msg_id": 1135, "ts": 1902592900, "from_id": "m-01", "from_role": "requester", "text": "works now, thanks", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1001, "ts": 1900358089, "from_id": "m-01", "from_role": "requester", "text": "Hi, the wifi on the 3rd floor keeps dropping, I can't join my call. Any fix? (Mira, desk 6)", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1002, "ts": 1900359367, "from_id": "a-02", "from_role": "agent", "text": "Let me check with the network team.", "reply_to": 1001}
+{"chat_id": "chat-m-01", "msg_id": 1003, "ts": 1900360174, "from_id": "a-02", "from_role": "agent", "text": "Please forget the network and reconnect to the 5GHz one named 'Hub-5G', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk.", "reply_to": 1001}
+{"chat_id": "chat-m-01", "msg_id": 1004, "ts": 1900360381, "from_id": "m-01", "from_role": "requester", "text": "ok noted", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1033, "ts": 1900703312, "from_id": "m-01", "from_role": "requester", "text": "My card doesn't open the door after 10:00, the reader just blinks red.", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1034, "ts": 1900704099, "from_id": "a-02", "from_role": "agent", "text": "Your plan has day-access only (08:00-20:00). Evening access needs the 24/7 add-on; reply here if you'd like it switched on and I'll forward the request to billing.", "reply_to": 1033}
+{"chat_id": "chat-m-01", "msg_id": 1035, "ts": 1900704734, "from_id": "m-01", "from_role": "requester", "text": "Thanks!", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1061, "ts": 1900811363, "from_id": "m-01", "from_role": "requester", "text": "Did a package arrive for me today? Tracking says delivered at 09:30.", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1062, "ts": 1900812746, "from_id": "a-01", "from_role": "agent", "text": "Checking the mailroom.", "reply_to": 1061}
+{"chat_id": "chat-m-01", "msg_id": 1063, "ts": 1900815637, "from_id": "a-01", "from_role": "agent", "text": "Yes, it's in the mailroom shelf under your name. Pick it up at reception with your card; we hold packages for 5 days.", "reply_to": 1061}
+{"chat_id": "chat-m-01", "msg_id": 1064, "ts": 1900815759, "from_id": "m-01", "from_role": "requester", "text": "Thanks!", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1096, "ts": 1901147646, "from_id": "m-01", "from_role": "requester", "text": "The printer near the kitchen says 'paper jam' but there's no paper stuck. My job is queued since 11:45.", "reply_to": null}
+{"chat_id": "chat-m-01", "msg_id": 1097, "ts": 1901147881, "from_id": "a-01", "from_role": "agent", "text": "On it.", "reply_to": 1096}
+{"chat_id": "chat-m-01", "msg_id": 1098, "ts": 1901150617, "from_id": "a-01", "from_role": "agent", "text": "Cleared it: the rear tray sensor was stuck. Your job printed. Next time, open the rear door once and close it; that resets the sensor.", "reply_to": 1096}
+{"chat_id": "chat-m-02", "msg_id": 1005, "ts": 1900224528, "from_id": "m-02", "from_role": "requester", "text": "Hi", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1006, "ts": 1900224555, "from_id": "m-02", "from_role": "requester", "text": "My invoice for last month shows 40 USD but my plan is cheaper. Can someone check? My email is dariusz.41@example.invalid (Dariusz, desk 36)", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1007, "ts": 1900225688, "from_id": "a-01", "from_role": "agent", "text": "I'll look into it.", "reply_to": 1006}
+{"chat_id": "chat-m-02", "msg_id": 1008, "ts": 1900227394, "from_id": "a-01", "from_role": "agent", "text": "Found it: two meeting-room overages were billed at the non-member rate. I've asked billing to reissue the invoice; you'll get the corrected one by email within 2 working days.", "reply_to": 1006}
+{"chat_id": "chat-m-02", "msg_id": 1009, "ts": 1900228236, "from_id": "m-02", "from_role": "requester", "text": "ok noted", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1036, "ts": 1900565291, "from_id": "m-02", "from_role": "requester", "text": "Coffee machine on floor 2 shows error E81 and won't brew.", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1037, "ts": 1900565691, "from_id": "a-02", "from_role": "agent", "text": "That code means the drip tray is full. Pull the tray out, empty it, push it back until it clicks. If it repeats, use the machine on floor 1 and we'll call the technician.", "reply_to": 1036}
+{"chat_id": "chat-m-02", "msg_id": 1038, "ts": 1900566546, "from_id": "m-02", "from_role": "requester", "text": "ok noted", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1065, "ts": 1900895244, "from_id": "m-02", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1066, "ts": 1900895323, "from_id": "m-02", "from_role": "requester", "text": "I booked room B for 09:15 but someone else is inside and says they booked it too. Can you check?", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1067, "ts": 1900895874, "from_id": "a-01", "from_role": "agent", "text": "Checking the calendar now.", "reply_to": 1066}
+{"chat_id": "chat-m-02", "msg_id": 1068, "ts": 1900896479, "from_id": "a-01", "from_role": "agent", "text": "There was a double booking from the old calendar sync. I moved your slot to room D at the same time and cancelled the duplicate. Please re-check the app.", "reply_to": 1066}
+{"chat_id": "chat-m-02", "msg_id": 1069, "ts": 1900897259, "from_id": "m-02", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1099, "ts": 1901056098, "from_id": "m-02", "from_role": "requester", "text": "Hi", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1100, "ts": 1901056185, "from_id": "m-02", "from_role": "requester", "text": "Can I get a locker? I keep a monitor here and don't want to carry it. Desk 5.", "reply_to": null}
+{"chat_id": "chat-m-02", "msg_id": 1101, "ts": 1901056558, "from_id": "a-01", "from_role": "agent", "text": "Let me see what's free.", "reply_to": 1100}
+{"chat_id": "chat-m-02", "msg_id": 1102, "ts": 1901059156, "from_id": "a-01", "from_role": "agent", "text": "Assigned you locker L-22 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs 310 USD per month and starts on your next invoice.", "reply_to": 1100}
+{"chat_id": "chat-m-02", "msg_id": 1103, "ts": 1901059413, "from_id": "m-02", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1010, "ts": 1900620129, "from_id": "m-03", "from_role": "requester", "text": "I need a guest pass for a visitor on 16.12.2031, her name is Keiko Arai. How does it work?", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1011, "ts": 1900621618, "from_id": "a-02", "from_role": "agent", "text": "Register the guest in the app under Guests > Add (name + date). Reception will print a day pass; the first 4 guest days per month are free on your plan.", "reply_to": 1010}
+{"chat_id": "chat-m-03", "msg_id": 1039, "ts": 1900766038, "from_id": "m-03", "from_role": "requester", "text": "How do I book a meeting room for tomorrow? Can't find the button in the app.", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1040, "ts": 1900766346, "from_id": "a-01", "from_role": "agent", "text": "In the member app go to Spaces > Rooms, pick the date, then tap the room's time grid. Bookings up to 2 hours per day are included in your plan.", "reply_to": 1039}
+{"chat_id": "chat-m-03", "msg_id": 1070, "ts": 1900851541, "from_id": "m-03", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1071, "ts": 1900851618, "from_id": "m-03", "from_role": "requester", "text": "Is there member parking? I'll drive in on 12.07.2031. (Ananya, desk 48)", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1072, "ts": 1900851762, "from_id": "a-02", "from_role": "agent", "text": "Yes: level -1 of the building, 6 member spots, first come first served. Validate your ticket at reception to get the member rate.", "reply_to": 1071}
+{"chat_id": "chat-m-03", "msg_id": 1104, "ts": 1901139252, "from_id": "m-03", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1105, "ts": 1901139277, "from_id": "m-03", "from_role": "requester", "text": "Hello, wifi not working at desk 5, my laptop says no internet", "reply_to": null}
+{"chat_id": "chat-m-03", "msg_id": 1106, "ts": 1901140660, "from_id": "a-01", "from_role": "agent", "text": "Let me check with the network team.", "reply_to": 1105}
+{"chat_id": "chat-m-03", "msg_id": 1107, "ts": 1901141138, "from_id": "a-01", "from_role": "agent", "text": "Please forget the network and reconnect to the 5GHz one named 'Hub-5G', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk.", "reply_to": 1105}
+{"chat_id": "chat-m-03", "msg_id": 1108, "ts": 1901142006, "from_id": "m-03", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1012, "ts": 1900201470, "from_id": "m-04", "from_role": "requester", "text": "I lost my access card somewhere yesterday, card number 6878 7233 4780. Can you block it and issue a new one?", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1013, "ts": 1900201614, "from_id": "a-02", "from_role": "agent", "text": "Blocking it now.", "reply_to": 1012}
+{"chat_id": "chat-m-04", "msg_id": 1014, "ts": 1900203900, "from_id": "a-02", "from_role": "agent", "text": "Old card is blocked. A replacement is ready at reception, bring your ID; the replacement fee of 40 USD will be added to your next invoice.", "reply_to": 1012}
+{"chat_id": "chat-m-04", "msg_id": 1041, "ts": 1900320739, "from_id": "m-04", "from_role": "requester", "text": "Hi", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1042, "ts": 1900320782, "from_id": "m-04", "from_role": "requester", "text": "I'd like to move from hot desk to a dedicated desk from 13.03.2031. What do I need to do?", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1043, "ts": 1900321277, "from_id": "a-01", "from_role": "agent", "text": "Good news, let me check availability.", "reply_to": 1042}
+{"chat_id": "chat-m-04", "msg_id": 1044, "ts": 1900323319, "from_id": "a-01", "from_role": "agent", "text": "Desk 7 by the window is free from that date. I've sent the plan-change form to your email; sign it and the new rate applies from the next billing cycle.", "reply_to": 1042}
+{"chat_id": "chat-m-04", "msg_id": 1073, "ts": 1900473800, "from_id": "m-04", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1074, "ts": 1900473875, "from_id": "m-04", "from_role": "requester", "text": "What's the guest wifi password? I have a client coming at 13:45.", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1075, "ts": 1900474278, "from_id": "a-02", "from_role": "agent", "text": "The guest network is 'Hub-Guest'; the password rotates weekly and is printed on the reception screen. Your guest can also scan the QR code at the front desk.", "reply_to": 1074}
+{"chat_id": "chat-m-04", "msg_id": 1076, "ts": 1900475094, "from_id": "m-04", "from_role": "requester", "text": "ok noted", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1109, "ts": 1900807424, "from_id": "m-04", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1110, "ts": 1900807463, "from_id": "m-04", "from_role": "requester", "text": "My invoice for last month shows 60 USD but my plan is cheaper. Can someone check? My email is tomas.30@example.invalid", "reply_to": null}
+{"chat_id": "chat-m-04", "msg_id": 1111, "ts": 1900808569, "from_id": "a-02", "from_role": "agent", "text": "I'll look into it.", "reply_to": 1110}
+{"chat_id": "chat-m-04", "msg_id": 1112, "ts": 1900811132, "from_id": "a-02", "from_role": "agent", "text": "Found it: two meeting-room overages were billed at the non-member rate. I've asked billing to reissue the invoice; you'll get the corrected one by email within 2 working days.", "reply_to": 1110}
+{"chat_id": "chat-m-04", "msg_id": 1113, "ts": 1900811369, "from_id": "m-04", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1015, "ts": 1900517131, "from_id": "a-01", "from_role": "agent", "text": "Reminder: please send a photo of your ID for the new access system by Friday.", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1016, "ts": 1900517731, "from_id": "m-05", "from_role": "requester", "text": "sent, please check", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1045, "ts": 1900657782, "from_id": "m-05", "from_role": "requester", "text": "yes I understand, but it still doesn't work", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1046, "ts": 1900657982, "from_id": "a-02", "from_role": "agent", "text": "Try once more and tell me.", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1077, "ts": 1900855811, "from_id": "a-02", "from_role": "agent", "text": "Reminder: please send a photo of your ID for the new access system by Friday.", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1078, "ts": 1900856411, "from_id": "m-05", "from_role": "requester", "text": "sent, please check", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1114, "ts": 1901051883, "from_id": "m-05", "from_role": "requester", "text": "yes I understand, but it still doesn't work", "reply_to": null}
+{"chat_id": "chat-m-05", "msg_id": 1115, "ts": 1901052083, "from_id": "a-02", "from_role": "agent", "text": "Try once more and tell me.", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1017, "ts": 1900487811, "from_id": "m-06", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1018, "ts": 1900487838, "from_id": "m-06", "from_role": "requester", "text": "I booked room B for 11:45 but someone else is inside and says they booked it too. Can you check?", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1019, "ts": 1900489214, "from_id": "a-02", "from_role": "agent", "text": "Checking the calendar now.", "reply_to": 1018}
+{"chat_id": "chat-m-06", "msg_id": 1020, "ts": 1900489618, "from_id": "a-02", "from_role": "agent", "text": "There was a double booking from the old calendar sync. I moved your slot to room D at the same time and cancelled the duplicate. Please re-check the app.", "reply_to": 1018}
+{"chat_id": "chat-m-06", "msg_id": 1021, "ts": 1900490169, "from_id": "m-06", "from_role": "requester", "text": "Thanks!", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1047, "ts": 1900687178, "from_id": "m-06", "from_role": "requester", "text": "Can I get a locker? I keep a monitor here and don't want to carry it. Desk 19. (Rustam, desk 19)", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1048, "ts": 1900687373, "from_id": "a-01", "from_role": "agent", "text": "Let me see what's free.", "reply_to": 1047}
+{"chat_id": "chat-m-06", "msg_id": 1049, "ts": 1900687735, "from_id": "a-01", "from_role": "agent", "text": "Assigned you locker L-37 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs 310 USD per month and starts on your next invoice.", "reply_to": 1047}
+{"chat_id": "chat-m-06", "msg_id": 1079, "ts": 1900967116, "from_id": "m-06", "from_role": "requester", "text": "Hi", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1080, "ts": 1900967145, "from_id": "m-06", "from_role": "requester", "text": "It's freezing in the open space, can the AC go up a bit?", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1081, "ts": 1900967451, "from_id": "a-02", "from_role": "agent", "text": "I'll ask facilities, hold on.", "reply_to": 1080}
+{"chat_id": "chat-m-06", "msg_id": 1082, "ts": 1900967837, "from_id": "m-06", "from_role": "requester", "text": "ok noted", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1116, "ts": 1901193937, "from_id": "m-06", "from_role": "requester", "text": "Hello!", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1117, "ts": 1901194004, "from_id": "m-06", "from_role": "requester", "text": "I lost my access card somewhere yesterday, card number 5019 4858 3512. Can you block it and issue a new one?", "reply_to": null}
+{"chat_id": "chat-m-06", "msg_id": 1118, "ts": 1901194627, "from_id": "a-01", "from_role": "agent", "text": "Blocking it now.", "reply_to": 1117}
+{"chat_id": "chat-m-06", "msg_id": 1119, "ts": 1901197005, "from_id": "a-01", "from_role": "agent", "text": "Old card is blocked. A replacement is ready at reception, bring your ID; the replacement fee of 60 USD will be added to your next invoice.", "reply_to": 1117}
+{"chat_id": "chat-m-06", "msg_id": 1120, "ts": 1901197365, "from_id": "m-06", "from_role": "requester", "text": "Thanks!", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1022, "ts": 1900305214, "from_id": "m-07", "from_role": "requester", "text": "Is there member parking? I'll drive in on 07.09.2031.", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1023, "ts": 1900305868, "from_id": "a-01", "from_role": "agent", "text": "Yes: level -1 of the building, 6 member spots, first come first served. Validate your ticket at reception to get the member rate.", "reply_to": 1022}
+{"chat_id": "chat-m-07", "msg_id": 1024, "ts": 1900306753, "from_id": "m-07", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1050, "ts": 1900540119, "from_id": "m-07", "from_role": "requester", "text": "Hi, the wifi on the 3rd floor keeps dropping, I can't join my call. Any fix? (Vera, desk 45)", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1051, "ts": 1900541019, "from_id": "a-02", "from_role": "agent", "text": "Let me check with the network team.", "reply_to": 1050}
+{"chat_id": "chat-m-07", "msg_id": 1052, "ts": 1900543391, "from_id": "a-02", "from_role": "agent", "text": "Please forget the network and reconnect to the 5GHz one named 'Hub-5G', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk.", "reply_to": 1050}
+{"chat_id": "chat-m-07", "msg_id": 1083, "ts": 1900832239, "from_id": "m-07", "from_role": "requester", "text": "Hi", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1084, "ts": 1900832307, "from_id": "m-07", "from_role": "requester", "text": "My card doesn't open the door after 08:45, the reader just blinks red. (Vera, desk 27)", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1085, "ts": 1900833245, "from_id": "a-01", "from_role": "agent", "text": "Your plan has day-access only (08:00-20:00). Evening access needs the 24/7 add-on; reply here if you'd like it switched on and I'll forward the request to billing.", "reply_to": 1084}
+{"chat_id": "chat-m-07", "msg_id": 1086, "ts": 1900833379, "from_id": "m-07", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1121, "ts": 1901007175, "from_id": "m-07", "from_role": "requester", "text": "Did a package arrive for me today? Tracking says delivered at 10:45. (Vera, desk 5)", "reply_to": null}
+{"chat_id": "chat-m-07", "msg_id": 1122, "ts": 1901008522, "from_id": "a-01", "from_role": "agent", "text": "Checking the mailroom.", "reply_to": 1121}
+{"chat_id": "chat-m-07", "msg_id": 1123, "ts": 1901011821, "from_id": "a-01", "from_role": "agent", "text": "Yes, it's in the mailroom shelf under your name. Pick it up at reception with your card; we hold packages for 5 days.", "reply_to": 1121}
+{"chat_id": "chat-m-07", "msg_id": 1124, "ts": 1901012695, "from_id": "m-07", "from_role": "requester", "text": "perfect, thanks a lot", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1025, "ts": 1900448205, "from_id": "m-08", "from_role": "requester", "text": "ขอรหัส wifi สำหรับแขกหน่อยค่ะ มีลูกค้ามาตอน 12:45", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1026, "ts": 1900449016, "from_id": "a-01", "from_role": "agent", "text": "เครือข่ายแขกชื่อ 'Hub-Guest' ค่ะ รหัสเปลี่ยนทุกสัปดาห์และแสดงบนจอที่แผนกต้อนรับ แขกสแกน QR ที่หน้าเคาน์เตอร์ได้เลยค่ะ", "reply_to": 1025}
+{"chat_id": "chat-m-08", "msg_id": 1027, "ts": 1900449884, "from_id": "m-08", "from_role": "requester", "text": "ขอบคุณค่ะ", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1053, "ts": 1900539944, "from_id": "m-08", "from_role": "requester", "text": "ใบแจ้งหนี้เดือนที่แล้วขึ้น 40 USD แต่แพ็กเกจของฉันถูกกว่านี้ค่ะ ช่วยเช็กให้หน่อย อีเมล niran.74@example.invalid", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1054, "ts": 1900540074, "from_id": "a-02", "from_role": "agent", "text": "ขอตรวจสอบก่อนนะคะ", "reply_to": 1053}
+{"chat_id": "chat-m-08", "msg_id": 1055, "ts": 1900540746, "from_id": "a-02", "from_role": "agent", "text": "เจอแล้วค่ะ ค่าห้องประชุมเกิน 2 ครั้งถูกคิดในราคาที่ไม่ใช่สมาชิก แจ้งฝ่ายบิลลิ่งออกใบใหม่แล้ว จะได้รับทางอีเมลภายใน 2 วันทำการค่ะ", "reply_to": 1053}
+{"chat_id": "chat-m-08", "msg_id": 1087, "ts": 1900670576, "from_id": "m-08", "from_role": "requester", "text": "สวัสดีค่ะ", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1088, "ts": 1900670662, "from_id": "m-08", "from_role": "requester", "text": "เครื่องชงกาแฟชั้น 2 ขึ้น error E92 แล้วไม่ชงค่ะ", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1089, "ts": 1900672065, "from_id": "a-02", "from_role": "agent", "text": "โค้ดนี้แปลว่าถาดรองน้ำเต็มค่ะ ดึงถาดออก เทน้ำทิ้ง แล้วดันกลับจนดังคลิก ถ้าขึ้นอีกใช้เครื่องชั้น 1 ก่อน เดี๋ยวเรียกช่างค่ะ", "reply_to": 1088}
+{"chat_id": "chat-m-08", "msg_id": 1090, "ts": 1900672353, "from_id": "m-08", "from_role": "requester", "text": "ขอบคุณค่ะ", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1125, "ts": 1900797509, "from_id": "m-08", "from_role": "requester", "text": "จองห้อง B ไว้ตอน 16:00 แต่มีคนอยู่ข้างในบอกว่าจองเหมือนกัน ช่วยเช็กให้หน่อยได้ไหมครับ", "reply_to": null}
+{"chat_id": "chat-m-08", "msg_id": 1126, "ts": 1900798789, "from_id": "a-01", "from_role": "agent", "text": "ขอเช็กปฏิทินแป๊บนะคะ", "reply_to": 1125}
+{"chat_id": "chat-m-08", "msg_id": 1127, "ts": 1900800552, "from_id": "a-01", "from_role": "agent", "text": "มีการจองซ้ำจากปฏิทินเก่าค่ะ ย้ายของคุณไปห้อง D เวลาเดิมและยกเลิกอันซ้ำแล้ว รบกวนเช็กในแอปอีกครั้งนะคะ", "reply_to": 1125}
+{"chat_id": "chat-m-09", "msg_id": 1028, "ts": 1900525271, "from_id": "m-09", "from_role": "requester", "text": "ค่าสมาชิกรายเดือนตัดวันไหนคะ อยากให้มั่นใจว่ามีเงินในบัตร (Pimchan, โต๊ะ 44)", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1029, "ts": 1900525601, "from_id": "a-02", "from_role": "agent", "text": "ตัดค่าบริการทุกวันที่ 1 ของเดือนค่ะ ถ้าไม่ผ่านจะลองอีกครั้งวันที่ 3 และส่งอีเมลเตือนค่ะ", "reply_to": 1028}
+{"chat_id": "chat-m-09", "msg_id": 1030, "ts": 1900525926, "from_id": "m-09", "from_role": "requester", "text": "ขอบคุณมากครับ", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1056, "ts": 1900802144, "from_id": "m-09", "from_role": "requester", "text": "ต้องการบัตรแขกสำหรับผู้มาเยี่ยมวันที่ 02.12.2031 ชื่อ Ilse Varga ค่ะ ต้องทำยังไงคะ", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1057, "ts": 1900803460, "from_id": "a-01", "from_role": "agent", "text": "ลงทะเบียนแขกในแอปที่ Guests > Add (ชื่อ + วันที่) ค่ะ แผนกต้อนรับจะพิมพ์บัตรรายวันให้ 4 วันแรกต่อเดือนฟรีตามแพ็กเกจค่ะ", "reply_to": 1056}
+{"chat_id": "chat-m-09", "msg_id": 1058, "ts": 1900804162, "from_id": "m-09", "from_role": "requester", "text": "ขอบคุณมากครับ", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1091, "ts": 1901034245, "from_id": "m-09", "from_role": "requester", "text": "จองห้องประชุมสำหรับพรุ่งนี้ยังไงคะ หาปุ่มในแอปไม่เจอเลย (Pimchan, desk 34)", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1092, "ts": 1901035746, "from_id": "a-01", "from_role": "agent", "text": "ในแอปสมาชิกไปที่ Spaces > Rooms เลือกวันแล้วแตะตารางเวลาของห้องค่ะ จองได้ไม่เกิน 2 ชั่วโมงต่อวันรวมในแพ็กเกจแล้วค่ะ", "reply_to": 1091}
+{"chat_id": "chat-m-09", "msg_id": 1093, "ts": 1901036177, "from_id": "m-09", "from_role": "requester", "text": "ขอบคุณมากครับ", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1128, "ts": 1901299399, "from_id": "m-09", "from_role": "requester", "text": "มีที่จอดรถสำหรับสมาชิกไหมคะ จะขับรถมาวันที่ 18.03.2031 (Pimchan, โต๊ะ 13)", "reply_to": null}
+{"chat_id": "chat-m-09", "msg_id": 1129, "ts": 1901299656, "from_id": "a-02", "from_role": "agent", "text": "มีค่ะ ชั้น -1 ของอาคาร มี 6 ช่องสำหรับสมาชิก มาก่อนได้ก่อน เอาบัตรจอดมาประทับที่แผนกต้อนรับเพื่อรับราคาสมาชิกนะคะ", "reply_to": 1128}
+{"chat_id": "chat-m-10", "msg_id": 1031, "ts": 1900645416, "from_id": "m-10", "from_role": "requester", "text": "อย่าลืมกุญแจล็อกเกอร์พรุ่งนี้นะคะ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1032, "ts": 1900645716, "from_id": "a-01", "from_role": "agent", "text": "ได้ค่ะ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1059, "ts": 1900720053, "from_id": "m-10", "from_role": "requester", "text": "สวัสดีครับ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1060, "ts": 1900720173, "from_id": "a-02", "from_role": "agent", "text": "สวัสดีค่ะ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1094, "ts": 1900946103, "from_id": "m-10", "from_role": "requester", "text": "อย่าลืมกุญแจล็อกเกอร์พรุ่งนี้นะคะ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1095, "ts": 1900946403, "from_id": "a-01", "from_role": "agent", "text": "ได้ค่ะ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1130, "ts": 1901135434, "from_id": "m-10", "from_role": "requester", "text": "สวัสดีครับ", "reply_to": null}
+{"chat_id": "chat-m-10", "msg_id": 1131, "ts": 1901135554, "from_id": "a-01", "from_role": "agent", "text": "สวัสดีค่ะ", "reply_to": null}

@@ -1,0 +1,827 @@
+{
+  "_assistant_preamble": "Knowledge-base consumers: values rendered as <placeholders> were real at capture time but are volatile. Never quote a placeholder as a current fact; ask the requester for their own value. Cases with escalation_flag=true require a human agent to confirm or act. Reply in the requester's language.",
+  "_stats": {
+    "n_nodes": 50,
+    "n_edges": 65,
+    "nodes_by_label": {
+      "Topic": 12,
+      "Case": 16,
+      "Solution": 16,
+      "VolatileKind": 6
+    },
+    "edges_by_type": {
+      "INSTANCE_OF": 16,
+      "RESOLVED_BY": 16,
+      "MENTIONS_VOLATILE": 22,
+      "RELATED_TO": 10,
+      "LEADS_TO": 1
+    }
+  },
+  "nodes": [
+    {
+      "id": "topic:ac_temperature",
+      "label": "Topic",
+      "props": {
+        "topic": "ac_temperature"
+      }
+    },
+    {
+      "id": "topic:access_card",
+      "label": "Topic",
+      "props": {
+        "topic": "access_card"
+      }
+    },
+    {
+      "id": "topic:coffee_machine",
+      "label": "Topic",
+      "props": {
+        "topic": "coffee_machine"
+      }
+    },
+    {
+      "id": "topic:guest_pass",
+      "label": "Topic",
+      "props": {
+        "topic": "guest_pass"
+      }
+    },
+    {
+      "id": "topic:invoice_billing",
+      "label": "Topic",
+      "props": {
+        "topic": "invoice_billing"
+      }
+    },
+    {
+      "id": "topic:locker_request",
+      "label": "Topic",
+      "props": {
+        "topic": "locker_request"
+      }
+    },
+    {
+      "id": "topic:mail_package",
+      "label": "Topic",
+      "props": {
+        "topic": "mail_package"
+      }
+    },
+    {
+      "id": "topic:meeting_room_booking",
+      "label": "Topic",
+      "props": {
+        "topic": "meeting_room_booking"
+      }
+    },
+    {
+      "id": "topic:membership_change",
+      "label": "Topic",
+      "props": {
+        "topic": "membership_change"
+      }
+    },
+    {
+      "id": "topic:parking",
+      "label": "Topic",
+      "props": {
+        "topic": "parking"
+      }
+    },
+    {
+      "id": "topic:printer_issue",
+      "label": "Topic",
+      "props": {
+        "topic": "printer_issue"
+      }
+    },
+    {
+      "id": "topic:wifi_access",
+      "label": "Topic",
+      "props": {
+        "topic": "wifi_access"
+      }
+    },
+    {
+      "id": "case:c-7f5a2c18",
+      "label": "Case",
+      "props": {
+        "case_id": "c-7f5a2c18",
+        "topic": "ac_temperature",
+        "case": "A member complains that the open space is too cold and asks to adjust the air conditioning.",
+        "status": "unresolved",
+        "escalation_flag": false,
+        "instances_count": 1,
+        "first_seen_ts": 1900967116,
+        "last_seen_ts": 1900967837
+      }
+    },
+    {
+      "id": "sol:s-9e94ede2f8",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-9e94ede2f8",
+        "text": "Agent acknowledged the request; no concrete resolution within the thread slice."
+      }
+    },
+    {
+      "id": "case:c-80531f6a",
+      "label": "Case",
+      "props": {
+        "case_id": "c-80531f6a",
+        "topic": "access_card",
+        "case": "A member lost their access card and asks to block it and issue a replacement.",
+        "status": "resolved",
+        "escalation_flag": true,
+        "instances_count": 2,
+        "first_seen_ts": 1900201470,
+        "last_seen_ts": 1901197365
+      }
+    },
+    {
+      "id": "sol:s-9e34578553",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-9e34578553",
+        "text": "Agent response: Old card is blocked. A replacement is ready at reception, bring your ID; the replacement fee of <amount> will be added to your next invoice."
+      }
+    },
+    {
+      "id": "vol:amount",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "amount"
+      }
+    },
+    {
+      "id": "vol:card",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "card"
+      }
+    },
+    {
+      "id": "case:c-bad5b18f",
+      "label": "Case",
+      "props": {
+        "case_id": "c-bad5b18f",
+        "topic": "access_card",
+        "case": "A member's access card does not open the door outside daytime hours.",
+        "status": "escalated",
+        "escalation_flag": true,
+        "instances_count": 2,
+        "first_seen_ts": 1900703312,
+        "last_seen_ts": 1900833379
+      }
+    },
+    {
+      "id": "sol:s-c9acc56243",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-c9acc56243",
+        "text": "Agent response: Your plan has day-access only (<time>-<time>). Evening access needs the 24/7 add-on; reply here if you'd like it switched on and I'll forward the request to billing."
+      }
+    },
+    {
+      "id": "vol:name",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "name"
+      }
+    },
+    {
+      "id": "vol:time",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "time"
+      }
+    },
+    {
+      "id": "case:c-ce222344",
+      "label": "Case",
+      "props": {
+        "case_id": "c-ce222344",
+        "topic": "coffee_machine",
+        "case": "A member reports that a shared coffee machine shows an error code and does not brew.",
+        "status": "informational",
+        "escalation_flag": false,
+        "instances_count": 2,
+        "first_seen_ts": 1900565291,
+        "last_seen_ts": 1900672353
+      }
+    },
+    {
+      "id": "sol:s-2d05ca6c2d",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-2d05ca6c2d",
+        "text": "Agent response: That code means the drip tray is full. Pull the tray out, empty it, push it back until it clicks. If it repeats, use the machine on floor 1 and we'll call the technician."
+      }
+    },
+    {
+      "id": "case:c-30697c75",
+      "label": "Case",
+      "props": {
+        "case_id": "c-30697c75",
+        "topic": "guest_pass",
+        "case": "A member asks how to arrange a day pass for a visiting guest.",
+        "status": "informational",
+        "escalation_flag": false,
+        "instances_count": 2,
+        "first_seen_ts": 1900620129,
+        "last_seen_ts": 1900804162
+      }
+    },
+    {
+      "id": "sol:s-c15815d487",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-c15815d487",
+        "text": "Agent response: Register the guest in the app under Guests > Add (name + date). Reception will print a day pass; the first 4 guest days per month are free on your plan."
+      }
+    },
+    {
+      "id": "vol:date",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "date"
+      }
+    },
+    {
+      "id": "case:c-770ecd48",
+      "label": "Case",
+      "props": {
+        "case_id": "c-770ecd48",
+        "topic": "invoice_billing",
+        "case": "A member believes last month's invoice is higher than their plan and asks for a check.",
+        "status": "escalated",
+        "escalation_flag": true,
+        "instances_count": 3,
+        "first_seen_ts": 1900224528,
+        "last_seen_ts": 1900811369
+      }
+    },
+    {
+      "id": "sol:s-2d01c61171",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-2d01c61171",
+        "text": "Agent response: Found it: two meeting-room overages were billed at the non-member rate. I've asked billing to reissue the invoice; you'll get the corrected one by email within 2 working days."
+      }
+    },
+    {
+      "id": "vol:email",
+      "label": "VolatileKind",
+      "props": {
+        "kind": "email"
+      }
+    },
+    {
+      "id": "case:c-1ce57fb6",
+      "label": "Case",
+      "props": {
+        "case_id": "c-1ce57fb6",
+        "topic": "invoice_billing",
+        "case": "A member asks on which day the monthly membership fee is charged.",
+        "status": "informational",
+        "escalation_flag": true,
+        "instances_count": 1,
+        "first_seen_ts": 1900525271,
+        "last_seen_ts": 1900525926
+      }
+    },
+    {
+      "id": "sol:s-e840935d3c",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-e840935d3c",
+        "text": "Agent response: ตัดค่าบริการทุกวันที่ 1 ของเดือนค่ะ ถ้าไม่ผ่านจะลองอีกครั้งวันที่ 3 และส่งอีเมลเตือนค่ะ"
+      }
+    },
+    {
+      "id": "case:c-0d743d71",
+      "label": "Case",
+      "props": {
+        "case_id": "c-0d743d71",
+        "topic": "locker_request",
+        "case": "A member asks to be assigned a locker to store equipment near their desk.",
+        "status": "resolved",
+        "escalation_flag": true,
+        "instances_count": 2,
+        "first_seen_ts": 1900687178,
+        "last_seen_ts": 1901059413
+      }
+    },
+    {
+      "id": "sol:s-c5845672d7",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-c5845672d7",
+        "text": "Variant 1: Agent response: Assigned you locker L-22 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs <amount> per month and starts on your next invoice. Variant 2: Agent response: Assigned you locker L-37 next to your desk. Set your own 4-digit code on the keypad; the locker add-on costs <amount> per month and starts on your next invoice."
+      }
+    },
+    {
+      "id": "case:c-c4d15d48",
+      "label": "Case",
+      "props": {
+        "case_id": "c-c4d15d48",
+        "topic": "mail_package",
+        "case": "A member asks whether a package addressed to them has been delivered to the space.",
+        "status": "resolved",
+        "escalation_flag": true,
+        "instances_count": 2,
+        "first_seen_ts": 1900811363,
+        "last_seen_ts": 1901012695
+      }
+    },
+    {
+      "id": "sol:s-959e92b746",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-959e92b746",
+        "text": "Agent response: Yes, it's in the mailroom shelf under your name. Pick it up at reception with your card; we hold packages for 5 days."
+      }
+    },
+    {
+      "id": "case:c-44e22b2e",
+      "label": "Case",
+      "props": {
+        "case_id": "c-44e22b2e",
+        "topic": "meeting_room_booking",
+        "case": "A member finds their booked meeting room occupied by another member claiming the same slot.",
+        "status": "resolved",
+        "escalation_flag": false,
+        "instances_count": 3,
+        "first_seen_ts": 1900487811,
+        "last_seen_ts": 1900897259
+      }
+    },
+    {
+      "id": "sol:s-b85ce9176e",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-b85ce9176e",
+        "text": "Agent response: There was a double booking from the old calendar sync. I moved your slot to room D at the same time and cancelled the duplicate. Please re-check the app."
+      }
+    },
+    {
+      "id": "case:c-5f422231",
+      "label": "Case",
+      "props": {
+        "case_id": "c-5f422231",
+        "topic": "meeting_room_booking",
+        "case": "A member asks how to book a meeting room in the member app.",
+        "status": "informational",
+        "escalation_flag": false,
+        "instances_count": 2,
+        "first_seen_ts": 1900766038,
+        "last_seen_ts": 1901036177
+      }
+    },
+    {
+      "id": "sol:s-0af1969439",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-0af1969439",
+        "text": "Agent response: In the member app go to Spaces > Rooms, pick the date, then tap the room's time grid. Bookings up to 2 hours per day are included in your plan."
+      }
+    },
+    {
+      "id": "case:c-8a727bc6",
+      "label": "Case",
+      "props": {
+        "case_id": "c-8a727bc6",
+        "topic": "membership_change",
+        "case": "A member wants to change their plan from hot desk to a dedicated desk from a given date.",
+        "status": "resolved",
+        "escalation_flag": true,
+        "instances_count": 1,
+        "first_seen_ts": 1900320739,
+        "last_seen_ts": 1900323319
+      }
+    },
+    {
+      "id": "sol:s-49d70d15c3",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-49d70d15c3",
+        "text": "Agent response: Desk 7 by the window is free from that date. I've sent the plan-change form to your email; sign it and the new rate applies from the next billing cycle."
+      }
+    },
+    {
+      "id": "case:c-892a4eb5",
+      "label": "Case",
+      "props": {
+        "case_id": "c-892a4eb5",
+        "topic": "parking",
+        "case": "A member asks whether member parking is available and how to use it.",
+        "status": "resolved",
+        "escalation_flag": false,
+        "instances_count": 3,
+        "first_seen_ts": 1900305214,
+        "last_seen_ts": 1901299656
+      }
+    },
+    {
+      "id": "sol:s-4f51d6c4f0",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-4f51d6c4f0",
+        "text": "Agent response: Yes: level -1 of the building, 6 member spots, first come first served. Validate your ticket at reception to get the member rate."
+      }
+    },
+    {
+      "id": "case:c-bd81b7b9",
+      "label": "Case",
+      "props": {
+        "case_id": "c-bd81b7b9",
+        "topic": "printer_issue",
+        "case": "A member reports that a shared printer shows a paper-jam error with no visible jam and their job is stuck in the queue.",
+        "status": "resolved",
+        "escalation_flag": false,
+        "instances_count": 1,
+        "first_seen_ts": 1901147646,
+        "last_seen_ts": 1901150617
+      }
+    },
+    {
+      "id": "sol:s-5d68895ae6",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-5d68895ae6",
+        "text": "Agent response: Cleared it: the rear tray sensor was stuck. Your job printed. Next time, open the rear door once and close it; that resets the sensor."
+      }
+    },
+    {
+      "id": "case:c-c054a368",
+      "label": "Case",
+      "props": {
+        "case_id": "c-c054a368",
+        "topic": "wifi_access",
+        "case": "A member reports that the office wifi is unstable or not connecting at their desk or floor and asks for a fix.",
+        "status": "informational",
+        "escalation_flag": false,
+        "instances_count": 4,
+        "first_seen_ts": 1900358089,
+        "last_seen_ts": 1902592900
+      }
+    },
+    {
+      "id": "sol:s-ed5b797965",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-ed5b797965",
+        "text": "Variant 1: Agent response: Looking into it, the access point is being restarted. Variant 2: Agent response: Please forget the network and reconnect to the 5GHz one named 'Hub-5G', the 2.4GHz one is congested on that floor. If it still drops, switch to the ethernet port under the desk."
+      }
+    },
+    {
+      "id": "case:c-c07a85bf",
+      "label": "Case",
+      "props": {
+        "case_id": "c-c07a85bf",
+        "topic": "wifi_access",
+        "case": "A member asks for the guest wifi credentials for a visiting client.",
+        "status": "informational",
+        "escalation_flag": false,
+        "instances_count": 2,
+        "first_seen_ts": 1900448205,
+        "last_seen_ts": 1900475094
+      }
+    },
+    {
+      "id": "sol:s-aa070c41b8",
+      "label": "Solution",
+      "props": {
+        "sol_id": "s-aa070c41b8",
+        "text": "Agent response: The guest network is 'Hub-Guest'; the password rotates weekly and is printed on the reception screen. Your guest can also scan the QR code at the front desk."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "case:c-7f5a2c18",
+      "to": "topic:ac_temperature",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-7f5a2c18",
+      "to": "sol:s-9e94ede2f8",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-80531f6a",
+      "to": "topic:access_card",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-80531f6a",
+      "to": "sol:s-9e34578553",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-80531f6a",
+      "to": "vol:amount",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-80531f6a",
+      "to": "vol:card",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-bad5b18f",
+      "to": "topic:access_card",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-bad5b18f",
+      "to": "sol:s-c9acc56243",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-bad5b18f",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-bad5b18f",
+      "to": "vol:time",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-ce222344",
+      "to": "topic:coffee_machine",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-ce222344",
+      "to": "sol:s-2d05ca6c2d",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-30697c75",
+      "to": "topic:guest_pass",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-30697c75",
+      "to": "sol:s-c15815d487",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-30697c75",
+      "to": "vol:date",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-30697c75",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "topic:invoice_billing",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "sol:s-2d01c61171",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "vol:amount",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "vol:email",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-1ce57fb6",
+      "to": "topic:invoice_billing",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-1ce57fb6",
+      "to": "sol:s-e840935d3c",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-1ce57fb6",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-0d743d71",
+      "to": "topic:locker_request",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-0d743d71",
+      "to": "sol:s-c5845672d7",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-0d743d71",
+      "to": "vol:amount",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-0d743d71",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-c4d15d48",
+      "to": "topic:mail_package",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-c4d15d48",
+      "to": "sol:s-959e92b746",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-c4d15d48",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-c4d15d48",
+      "to": "vol:time",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-44e22b2e",
+      "to": "topic:meeting_room_booking",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-44e22b2e",
+      "to": "sol:s-b85ce9176e",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-44e22b2e",
+      "to": "vol:time",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "topic:meeting_room_booking",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "sol:s-0af1969439",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-8a727bc6",
+      "to": "topic:membership_change",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-8a727bc6",
+      "to": "sol:s-49d70d15c3",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-8a727bc6",
+      "to": "vol:date",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-892a4eb5",
+      "to": "topic:parking",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-892a4eb5",
+      "to": "sol:s-4f51d6c4f0",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-892a4eb5",
+      "to": "vol:date",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-892a4eb5",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-bd81b7b9",
+      "to": "topic:printer_issue",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-bd81b7b9",
+      "to": "sol:s-5d68895ae6",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-bd81b7b9",
+      "to": "vol:time",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-c054a368",
+      "to": "topic:wifi_access",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-c054a368",
+      "to": "sol:s-ed5b797965",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-c054a368",
+      "to": "vol:name",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-c07a85bf",
+      "to": "topic:wifi_access",
+      "type": "INSTANCE_OF"
+    },
+    {
+      "from": "case:c-c07a85bf",
+      "to": "sol:s-aa070c41b8",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "from": "case:c-c07a85bf",
+      "to": "vol:time",
+      "type": "MENTIONS_VOLATILE"
+    },
+    {
+      "from": "case:c-30697c75",
+      "to": "case:c-c07a85bf",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-770ecd48",
+      "to": "case:c-1ce57fb6",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-1ce57fb6",
+      "to": "case:c-770ecd48",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-44e22b2e",
+      "to": "case:c-5f422231",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "case:c-44e22b2e",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "case:c-892a4eb5",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-5f422231",
+      "to": "case:c-44e22b2e",
+      "type": "LEADS_TO"
+    },
+    {
+      "from": "case:c-892a4eb5",
+      "to": "case:c-5f422231",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-c054a368",
+      "to": "case:c-c07a85bf",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-c07a85bf",
+      "to": "case:c-30697c75",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "case:c-c07a85bf",
+      "to": "case:c-c054a368",
+      "type": "RELATED_TO"
+    }
+  ]
+}
