@@ -135,13 +135,16 @@ These numbers come from the production run on the client's data and cannot
 be reproduced from this repository:
 
 * 38/38 regression tests passing on the frozen rule set (iteration 21);
-* 303 canonical cases across 32 topics in the production knowledge base,
-  built from several thousand raw chat messages;
+* 228 canonical cases in the final production knowledge base, built from
+  13,781 raw chat messages in four languages (an earlier baseline run of the
+  pipeline produced 303 cases across 32 topics; the final base came from a
+  simplified pipeline plus 564 logged human edits);
 * precision was measured per iteration by an independent judge model
-  re-reading every source thread; the pipeline reached several consecutive
-  iterations with no judge-flagged errors on the evaluation slice. No overall
-  accuracy figure is claimed here: the evaluation set was small and
-  client-specific.
+  re-reading every source thread. The judge reported no errors on the
+  in-loop evaluation slice but flagged 20 of 53 cases on fresh threads, which
+  is why the pipeline was simplified and human review was added. No overall
+  accuracy figure is claimed here: the final base was not independently
+  evaluated and the evaluation set was small and client-specific.
 
 What this repository demonstrates instead: 40 unit and end-to-end tests on
 the deterministic modules, and an offline run that drops the planted noise
